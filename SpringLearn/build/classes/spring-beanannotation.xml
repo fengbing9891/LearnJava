@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+     xmlns="http://www.springframework.org/schema/beans"  
+     xmlns:context="http://www.springframework.org/schema/context"
+     xsi:schemaLocation="http://www.springframework.org/schema/beans 
+     http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+     http://www.springframework.org/schema/context 
+     http://www.springframework.org/schema/context/spring-context.xsd">   
+  
+    <!-- 注册bean后，处理bean中的方法或者成员变量的注解，context:component-scan已包含此
+      	配置 -->
+    <!-- 告诉spring我们打算使用基于注解的自动装配 -->
+  	<!-- <context:annotation-config/> -->
+  
+  	<!-- bean定义及作用域的注解实现  注解  @Component  @Scope-->
+  	<!-- 自动扫描包 ,检测这些类并注册相应的bean 将带有注解的类 纳入spring容器管理 -->  
+  	<context:component-scan base-package="com.beanannotation"/>
+
+</beans> 
+

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+     xmlns="http://www.springframework.org/schema/beans"  
+     xsi:schemaLocation="http://www.springframework.org/schema/beans 
+     http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">   
+  
+    <!-- 设值注入 -->
+    <!--spring中一个bean就是一个类对象，class代表这个类,property指的是这个类中的属性, -->
+  	<!-- <bean id="injectionService" class="com.injection.InjectionServiceImpl">
+  		<property name="injectionDao" ref="injectionDao" ></property>
+  	</bean> -->
+  	
+  	<!-- 构造器注入 -->
+  	<!-- constructor-arg 指的是构造器参数 -->
+  	<bean id="injectionService" class="com.injection.InjectionServiceImpl">
+  		<constructor-arg name="injectionDao" ref="injectionDao" />
+  	</bean>
+  
+  	<bean id="injectionDao" class="com.injection.InjectionDaoImpl"/>
+  
+</beans> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
